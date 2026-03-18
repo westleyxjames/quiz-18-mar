@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Challenges - TriviaVault</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz-styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">TV</div>
+                    <span class="logo-text">TriviaVault</span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="how-it-works.html" class="nav-link">Platform Guide</a>
+                    <a href="quizzes.html" class="nav-link active">Challenges</a>
+                    <a href="prizes.html" class="nav-link">Rewards</a>
+                    <a href="about.html" class="nav-link">Company</a>
+                    <a href="contact.html" class="nav-link">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="wallet.html" class="wallet-btn">
+                        <span class="wallet-icon">💳</span>
+                        <span class="wallet-points">0 pts</span>
+                    </a>
+                    <a href="quizzes.html" class="btn-primary">Get Started</a>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="menu-icon">☰</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="how-it-works.html" class="mobile-nav-link">Platform Guide</a>
+            <a href="quizzes.html" class="mobile-nav-link active">Challenges</a>
+            <a href="prizes.html" class="mobile-nav-link">Rewards</a>
+            <a href="about.html" class="mobile-nav-link">Company</a>
+            <a href="contact.html" class="mobile-nav-link">Support</a>
+            <a href="wallet.html" class="mobile-nav-link wallet-mobile">
+                <span>💳</span> <span class="wallet-points-mobile">0 Points</span>
+            </a>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="gradient-text">Knowledge Challenges</h1>
+                <p class="section-subtitle">
+                    Select your preferred category and start earning verified rewards through accurate responses
+                </p>
+            </div>
+
+            <div style="margin-bottom: 4rem; padding: 2rem; background: rgba(13, 148, 136, 0.1); border: 1px solid var(--primary-teal); border-radius: 16px; text-align: center;">
+                <p style="font-size: 1.125rem; color: var(--text-secondary); margin: 0;">
+                    <strong style="color: var(--primary-teal);">Earning Formula:</strong> Each correct answer generates 100 points • 1000 points converts to ₹1 INR
+                </p>
+            </div>
+
+            <div id="quizzesGrid" class="quizzes-grid">
+                <!-- Quizzes will be rendered here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">TV</div>
+                        <span class="logo-text">TriviaVault</span>
+                    </div>
+                    <p>A revolutionary platform where knowledge meets earnings. Answer trivia questions and convert your expertise into real money rewards.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigate</h3>
+                    <a href="index.html">Home</a>
+                    <a href="how-it-works.html">Platform Guide</a>
+                    <a href="quizzes.html">Challenges</a>
+                    <a href="prizes.html">Rewards</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <a href="about.html">About TriviaVault</a>
+                    <a href="contact.html">Contact Support</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Get in Touch</h3>
+                    <p>📧 hello@triviavault.com</p>
+                    <p>📞 +1 (929) 342-3821</p>
+                    <p>📍 New York, NY, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TriviaVault. All rights reserved worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="wallet.js"></script>
+    <script src="quiz-data.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Render quizzes
+        function renderQuizzes() {
+            const grid = document.getElementById('quizzesGrid');
+            
+            const quizHTML = quizzes.map(quiz => `
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <h3>${quiz.title}</h3>
+                        <div class="quiz-badge">${quiz.badge}</div>
+                    </div>
+                    <div class="quiz-info">
+                        <span>📚 ${quiz.category}</span>
+                        <span>📊 ${quiz.difficulty}</span>
+                        <span>❓ ${quiz.questions.length} Questions</span>
+                    </div>
+                    <p style="color: var(--text-secondary); margin: 1.5rem 0;">
+                        Test your knowledge and earn points through accurate responses in this ${quiz.category.toLowerCase()} challenge.
+                    </p>
+                    <a href="quiz-game.html?id=${quiz.id}" class="btn-primary" style="width: 100%; justify-content: center;">
+                        Begin Challenge
+                    </a>
+                </div>
+            `).join('');
+            
+            grid.innerHTML = quizHTML;
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', renderQuizzes);
+    </script>
+</body>
+</html>

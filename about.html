@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company - TriviaVault</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">TV</div>
+                    <span class="logo-text">TriviaVault</span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="how-it-works.html" class="nav-link">Platform Guide</a>
+                    <a href="quizzes.html" class="nav-link">Challenges</a>
+                    <a href="prizes.html" class="nav-link">Rewards</a>
+                    <a href="about.html" class="nav-link active">Company</a>
+                    <a href="contact.html" class="nav-link">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="wallet.html" class="wallet-btn">
+                        <span class="wallet-icon">💳</span>
+                        <span class="wallet-points">0 pts</span>
+                    </a>
+                    <a href="quizzes.html" class="btn-primary">Get Started</a>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="menu-icon">☰</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="how-it-works.html" class="mobile-nav-link">Platform Guide</a>
+            <a href="quizzes.html" class="mobile-nav-link">Challenges</a>
+            <a href="prizes.html" class="mobile-nav-link">Rewards</a>
+            <a href="about.html" class="mobile-nav-link active">Company</a>
+            <a href="contact.html" class="mobile-nav-link">Support</a>
+            <a href="wallet.html" class="mobile-nav-link wallet-mobile">
+                <span>💳</span> <span class="wallet-points-mobile">0 Points</span>
+            </a>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="gradient-text">About TriviaVault</h1>
+                <p class="section-subtitle">Pioneering the intersection of knowledge assessment and monetary compensation</p>
+            </div>
+
+            <div class="card-highlight">
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">🎯</div>
+                <h2 style="font-size: 2.25rem; margin-bottom: 1.5rem;">Our Mission</h2>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 58rem; margin: 0 auto; line-height: 1.8;">
+                    We envision a world where intellectual capability translates directly to financial opportunity. 
+                    TriviaVault eliminates traditional barriers between knowledge and earnings, creating an accessible 
+                    platform where expertise becomes currency through our transparent, equitable reward system.
+                </p>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="gradient-text" style="text-align: center; font-size: 2.75rem; margin-bottom: 3.5rem;">Company Evolution</h2>
+                <div class="feature-card" style="padding: 3.5rem 2.5rem;">
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+                        TriviaVault emerged from a fundamental question: why shouldn't intellectual competency generate 
+                        tangible value? Traditional knowledge platforms either charge participation fees or fail to 
+                        provide meaningful rewards, creating accessibility barriers for millions of potential contributors.
+                    </p>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+                        Launched in early 2025, we introduced a revolutionary business model—completely cost-free participation 
+                        combined with guaranteed monetary compensation. Our transparent point-to-currency conversion system 
+                        (1000 points = ₹1 INR) ensures clarity and fairness at every transaction.
+                    </p>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); line-height: 1.8;">
+                        Today, our platform serves thousands of daily participants who leverage their knowledge across 
+                        diverse subject areas, collectively earning substantial rewards while expanding their intellectual 
+                        horizons. We've established proof that knowledge monetization can be democratic, transparent, and rewarding.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="gradient-text" style="text-align: center; font-size: 2.75rem; margin-bottom: 3.5rem;">Foundational Principles</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💎</div>
+                        <h3>Universal Accessibility</h3>
+                        <p>Zero financial barriers to entry. No registration fees, subscription costs, or hidden charges. Knowledge is the only prerequisite.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Verified Compensation</h3>
+                        <p>Every challenge generates proportional points convertible to verified currency. No performance minimums or competitive rankings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Complete Transparency</h3>
+                        <p>Crystal-clear point conversion rates, straightforward terms, and honest communication throughout the user experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Immediate Rewards</h3>
+                        <p>Points credited instantly post-challenge. Withdrawal processing initiated immediately upon request without holding periods.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="gradient-text" style="text-align: center; font-size: 2.75rem; margin-bottom: 3.5rem;">Platform Impact</h2>
+                <div class="features-grid">
+                    <div class="feature-card" style="text-align: center; border-top: 4px solid var(--primary-teal);">
+                        <div style="font-size: 3.5rem; margin-bottom: 1.25rem;">👥</div>
+                        <h3 style="font-size: 3rem; font-weight: 700; color: var(--primary-teal); margin-bottom: 0.75rem;">75,000+</h3>
+                        <p style="color: var(--text-muted);">Active Participants</p>
+                    </div>
+                    <div class="feature-card" style="text-align: center; border-top: 4px solid var(--success);">
+                        <div style="font-size: 3.5rem; margin-bottom: 1.25rem;">🎮</div>
+                        <h3 style="font-size: 3rem; font-weight: 700; color: var(--success); margin-bottom: 0.75rem;">2.5M+</h3>
+                        <p style="color: var(--text-muted);">Challenges Completed</p>
+                    </div>
+                    <div class="feature-card" style="text-align: center; border-top: 4px solid var(--accent-orange);">
+                        <div style="font-size: 3.5rem; margin-bottom: 1.25rem;">💰</div>
+                        <h3 style="font-size: 3rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 0.75rem;">₹8.5L+</h3>
+                        <p style="color: var(--text-muted);">Total Disbursed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="gradient-text" style="text-align: center; font-size: 2.75rem; margin-bottom: 3.5rem;">Why Select TriviaVault</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">✓</div>
+                        <h3>Zero Financial Risk</h3>
+                        <p>Complete absence of monetary commitment. Participate freely, earn proportionally.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">✓</div>
+                        <h3>Educational Value</h3>
+                        <p>Expand knowledge across diverse disciplines while generating income simultaneously.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">✓</div>
+                        <h3>Equitable Framework</h3>
+                        <p>Transparent regulations, verified rewards, absence of concealed algorithms or biases.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">✓</div>
+                        <h3>Intuitive Interface</h3>
+                        <p>Streamlined navigation, effortless interaction, cross-device compatibility.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem; padding: 3.5rem 2.5rem; background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(13, 148, 136, 0.15)); border: 1px solid var(--primary-teal); border-radius: 20px; text-align: center;">
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">🛡️</div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Security & Integrity</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 50rem; margin: 0 auto 2.5rem;">
+                    Your data protection and financial security remain our paramount concerns. We implement 
+                    industry-standard encryption and authentication protocols. Your information never reaches 
+                    third-party marketers or unauthorized entities.
+                </p>
+                <div class="trust-badges" style="justify-content: center; padding: 0;">
+                    <div class="trust-item">
+                        <span>🔒</span> SSL Encryption
+                    </div>
+                    <div class="trust-item">
+                        <span>🛡️</span> Verified Transactions
+                    </div>
+                    <div class="trust-item">
+                        <span>✓</span> Data Protection
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem; padding: 3.5rem 2.5rem; background: linear-gradient(135deg, rgba(13, 148, 136, 0.15), rgba(234, 88, 12, 0.15)); border: 1px solid var(--primary-teal); border-radius: 20px; text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Join Our Community</h2>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 42rem; margin: 0 auto 2.5rem;">
+                    Become part of thousands of knowledge professionals monetizing their expertise through verified rewards.
+                </p>
+                <a href="quizzes.html" class="btn-primary btn-large">
+                    Begin Your Journey
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">TV</div>
+                        <span class="logo-text">TriviaVault</span>
+                    </div>
+                    <p>A revolutionary platform where knowledge meets earnings. Answer trivia questions and convert your expertise into real money rewards.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigate</h3>
+                    <a href="index.html">Home</a>
+                    <a href="how-it-works.html">Platform Guide</a>
+                    <a href="quizzes.html">Challenges</a>
+                    <a href="prizes.html">Rewards</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <a href="about.html">About TriviaVault</a>
+                    <a href="contact.html">Contact Support</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Get in Touch</h3>
+                    <p>📧 hello@triviavault.com</p>
+                    <p>📞 +1 (929) 342-3821</p>
+                    <p>📍 New York, NY, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TriviaVault. All rights reserved worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="wallet.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

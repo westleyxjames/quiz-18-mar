@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards - TriviaVault</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">TV</div>
+                    <span class="logo-text">TriviaVault</span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="how-it-works.html" class="nav-link">Platform Guide</a>
+                    <a href="quizzes.html" class="nav-link">Challenges</a>
+                    <a href="prizes.html" class="nav-link active">Rewards</a>
+                    <a href="about.html" class="nav-link">Company</a>
+                    <a href="contact.html" class="nav-link">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="wallet.html" class="wallet-btn">
+                        <span class="wallet-icon">💳</span>
+                        <span class="wallet-points">0 pts</span>
+                    </a>
+                    <a href="quizzes.html" class="btn-primary">Get Started</a>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="menu-icon">☰</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="how-it-works.html" class="mobile-nav-link">Platform Guide</a>
+            <a href="quizzes.html" class="mobile-nav-link">Challenges</a>
+            <a href="prizes.html" class="mobile-nav-link active">Rewards</a>
+            <a href="about.html" class="mobile-nav-link">Company</a>
+            <a href="contact.html" class="mobile-nav-link">Support</a>
+            <a href="wallet.html" class="mobile-nav-link wallet-mobile">
+                <span>💳</span> <span class="wallet-points-mobile">0 Points</span>
+            </a>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="gradient-text">Transparent Reward Structure</h1>
+                <p class="section-subtitle">Every challenge completed translates to verified earnings - here's our comprehensive breakdown</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" style="border-top: 4px solid var(--primary-teal);">
+                    <div class="feature-icon">💰</div>
+                    <h3>Monetary Compensation</h3>
+                    <p>
+                        Direct conversion of points to Indian Rupees credited to your verified account. Transparent 
+                        exchange rate with zero hidden deductions or processing fees.
+                    </p>
+                    <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(16, 185, 129, 0.1); border-radius: 10px; border: 1px solid var(--success);">
+                        <p style="font-weight: 700; color: var(--success); margin: 0;">1000 Points = ₹1 INR</p>
+                    </div>
+                </div>
+                <div class="feature-card" style="border-top: 4px solid var(--accent-orange);">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Digital Vouchers</h3>
+                    <p>
+                        Premium gift certificates for major e-commerce platforms including Amazon, Google Play, 
+                        and Apple iTunes available through our redemption portal.
+                    </p>
+                    <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(234, 88, 12, 0.1); border-radius: 10px; border: 1px solid var(--accent-orange);">
+                        <p style="font-weight: 700; color: var(--accent-orange); margin: 0;">Coming Q2 2026</p>
+                    </div>
+                </div>
+                <div class="feature-card" style="border-top: 4px solid var(--primary-blue);">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Premium Points</h3>
+                    <p>
+                        Accumulate points through accurate responses. Save incrementally for larger withdrawals 
+                        or redeem immediately upon reaching conversion thresholds.
+                    </p>
+                    <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(30, 64, 175, 0.1); border-radius: 10px; border: 1px solid var(--primary-blue);">
+                        <p style="font-weight: 700; color: var(--primary-blue); margin: 0;">100 Points Per Correct Answer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-highlight" style="margin-top: 5rem;">
+                <h2 style="font-size: 2.25rem; margin-bottom: 2.5rem;">💎 Earnings Breakdown Matrix</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">1️⃣</div>
+                        <h3>Single Accurate Response</h3>
+                        <p style="font-size: 2.25rem; font-weight: 700; color: var(--primary-teal); margin: 1.25rem 0;">100</p>
+                        <p style="color: var(--text-muted);">Points Earned</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔟</div>
+                        <h3>Ten Correct Answers</h3>
+                        <p style="font-size: 2.25rem; font-weight: 700; color: var(--success); margin: 1.25rem 0;">₹1</p>
+                        <p style="color: var(--text-muted);">1,000 Points</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💯</div>
+                        <h3>Century of Accuracy</h3>
+                        <p style="font-size: 2.25rem; font-weight: 700; color: var(--accent-orange); margin: 1.25rem 0;">₹10</p>
+                        <p style="color: var(--text-muted);">10,000 Points</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Thousand Perfect Responses</h3>
+                        <p style="font-size: 2.25rem; font-weight: 700; color: var(--primary-blue); margin: 1.25rem 0;">₹100</p>
+                        <p style="color: var(--text-muted);">100,000 Points</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 class="gradient-text" style="text-align: center; font-size: 2.75rem; margin-bottom: 3.5rem;">Maximize Your Earnings</h2>
+                
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <h3>Consistent Participation</h3>
+                        <p>Engage with challenges regularly to accelerate point accumulation and reach withdrawal thresholds faster.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <h3>Focus on Accuracy</h3>
+                        <p>Each precise answer generates 100 points instantly. Quality responses directly impact earning velocity.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <h3>Diversify Categories</h3>
+                        <p>Explore various challenge topics to maximize participation opportunities and expand earning potential.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">04</div>
+                        <h3>Flexible Withdrawals</h3>
+                        <p>Convert accumulated points to currency at your preferred intervals once minimum thresholds are achieved.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem; padding: 3.5rem 2.5rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(13, 148, 136, 0.15)); border: 1px solid var(--success); border-radius: 20px; text-align: center;">
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">🛡️</div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Verified Reward Guarantee</h2>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 50rem; margin: 0 auto 2.5rem;">
+                    Every challenge completion generates proportional points based on accuracy. No competitive rankings, 
+                    no minimum performance requirements. Your knowledge directly translates to verified earnings.
+                </p>
+                <div class="trust-badges" style="justify-content: center; padding: 0;">
+                    <div class="trust-item">
+                        <span>✓</span> Zero Entry Costs
+                    </div>
+                    <div class="trust-item">
+                        <span>✓</span> No Processing Fees
+                    </div>
+                    <div class="trust-item">
+                        <span>✓</span> Instant Point Credits
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem; padding: 3.5rem 2.5rem; background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(13, 148, 136, 0.15)); border: 1px solid var(--primary-teal); border-radius: 20px; text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Begin Earning Today</h2>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 42rem; margin: 0 auto 2.5rem;">
+                    Start your first challenge and experience our transparent reward system firsthand.
+                </p>
+                <a href="quizzes.html" class="btn-primary btn-large">
+                    View Available Challenges
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">TV</div>
+                        <span class="logo-text">TriviaVault</span>
+                    </div>
+                    <p>A revolutionary platform where knowledge meets earnings. Answer trivia questions and convert your expertise into real money rewards.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigate</h3>
+                    <a href="index.html">Home</a>
+                    <a href="how-it-works.html">Platform Guide</a>
+                    <a href="quizzes.html">Challenges</a>
+                    <a href="prizes.html">Rewards</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <a href="about.html">About TriviaVault</a>
+                    <a href="contact.html">Contact Support</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Get in Touch</h3>
+                    <p>📧 hello@triviavault.com</p>
+                    <p>📞 +1 (929) 342-3821</p>
+                    <p>📍 New York, NY, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TriviaVault. All rights reserved worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="wallet.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

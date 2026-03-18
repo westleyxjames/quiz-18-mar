@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wallet - TriviaVault</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="wallet-styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">TV</div>
+                    <span class="logo-text">TriviaVault</span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="how-it-works.html" class="nav-link">Platform Guide</a>
+                    <a href="quizzes.html" class="nav-link">Challenges</a>
+                    <a href="prizes.html" class="nav-link">Rewards</a>
+                    <a href="about.html" class="nav-link">Company</a>
+                    <a href="contact.html" class="nav-link">Support</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="wallet.html" class="wallet-btn">
+                        <span class="wallet-icon">💳</span>
+                        <span class="wallet-points">0 pts</span>
+                    </a>
+                    <a href="quizzes.html" class="btn-primary">Get Started</a>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="menu-icon">☰</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="how-it-works.html" class="mobile-nav-link">Platform Guide</a>
+            <a href="quizzes.html" class="mobile-nav-link">Challenges</a>
+            <a href="prizes.html" class="mobile-nav-link">Rewards</a>
+            <a href="about.html" class="mobile-nav-link">Company</a>
+            <a href="contact.html" class="mobile-nav-link">Support</a>
+            <a href="wallet.html" class="mobile-nav-link wallet-mobile">
+                <span>💳</span> <span class="wallet-points-mobile">0 Points</span>
+            </a>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="gradient-text">Your Digital Wallet</h1>
+                <p class="section-subtitle">Monitor earnings, track points, and process withdrawals</p>
+            </div>
+
+            <div class="wallet-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-info">
+                        <p class="stat-label">Available Points</p>
+                        <p class="stat-value" id="walletPoints">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <p class="stat-label">Current Value</p>
+                        <p class="stat-value">₹<span id="walletInr">0.00</span></p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💎</div>
+                    <div class="stat-info">
+                        <p class="stat-label">Total Withdrawn</p>
+                        <p class="stat-value">₹<span id="walletEarnings">0.00</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wallet-main">
+                <div class="cashout-section">
+                    <h2>Process Withdrawal</h2>
+                    <p>Convert accumulated points to Indian Rupees</p>
+                    
+                    <div class="conversion-info">
+                        <div class="conversion-row">
+                            <span>Exchange Rate:</span>
+                            <strong>1000 Points = ₹1 INR</strong>
+                        </div>
+                        <div class="conversion-row">
+                            <span>Minimum Threshold:</span>
+                            <strong>1000 Points</strong>
+                        </div>
+                        <div class="conversion-row">
+                            <span>Processing Duration:</span>
+                            <strong>1-3 Business Days</strong>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-large" id="cashoutBtn" onclick="wallet.cashout()">
+                        Initiate Withdrawal
+                    </button>
+                </div>
+
+                <div class="earning-guide">
+                    <h2>Earnings Acceleration</h2>
+                    <p>Maximize your point accumulation</p>
+                    
+                    <div class="guide-list">
+                        <div class="guide-item">
+                            <div class="guide-icon">🎯</div>
+                            <div>
+                                <h3>Focus on Accuracy</h3>
+                                <p>Each precise answer generates 100 points instantly</p>
+                            </div>
+                        </div>
+                        <div class="guide-item">
+                            <div class="guide-icon">📅</div>
+                            <div>
+                                <h3>Consistent Participation</h3>
+                                <p>Regular challenge completion accelerates earning velocity</p>
+                            </div>
+                        </div>
+                        <div class="guide-item">
+                            <div class="guide-icon">📚</div>
+                            <div>
+                                <h3>Category Diversification</h3>
+                                <p>Explore various subject areas for maximum opportunities</p>
+                            </div>
+                        </div>
+                        <div class="guide-item">
+                            <div class="guide-icon">💡</div>
+                            <div>
+                                <h3>Knowledge Enhancement</h3>
+                                <p>Study unfamiliar topics to expand earning potential</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wallet-actions">
+                <a href="quizzes.html" class="btn-primary btn-large">Explore Challenges</a>
+                <a href="prizes.html" class="btn-secondary btn-large">View Rewards</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cashout Modal -->
+    <div class="modal" id="cashoutModal">
+        <div class="modal-content">
+            <h2>Confirm Withdrawal</h2>
+            <p id="cashoutMessage"></p>
+            <div class="modal-actions">
+                <button class="btn-primary" id="confirmCashout">Confirm</button>
+                <button class="btn-secondary" id="cancelCashout">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">TV</div>
+                        <span class="logo-text">TriviaVault</span>
+                    </div>
+                    <p>A revolutionary platform where knowledge meets earnings. Answer trivia questions and convert your expertise into real money rewards.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigate</h3>
+                    <a href="index.html">Home</a>
+                    <a href="how-it-works.html">Platform Guide</a>
+                    <a href="quizzes.html">Challenges</a>
+                    <a href="prizes.html">Rewards</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Information</h3>
+                    <a href="about.html">About TriviaVault</a>
+                    <a href="contact.html">Contact Support</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Get in Touch</h3>
+                    <p>📧 hello@triviavault.com</p>
+                    <p>📞 +1 (929) 342-3821</p>
+                    <p>📍 New York, NY, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TriviaVault. All rights reserved worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="wallet.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
